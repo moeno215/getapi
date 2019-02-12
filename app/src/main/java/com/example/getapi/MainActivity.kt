@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class HomeFeed(val motors: List<MotorsItem>)
+class HomeFeed(var status: Int? = 0, var message: String? = null,var motors: List<MotorsItem>? = null)
 
-class MotorsItem(val getMotorCategoryId: String, val getName: String, val getThnMotor: String, val getId: String,
-            val getHargaJual: String)
+class MotorsItem(var id: String? = null, var name: String? = null, var harga_jual: String? = null, var motor_category_id: String? = null,
+            var thn_motor: String? = null)
 
