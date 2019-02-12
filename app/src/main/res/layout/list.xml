@@ -30,13 +30,13 @@
                     android:textStyle="bold"/>
 
             <TextView
-                    android:id="@+id/tanggal"
+                    android:id="@+id/idmotor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="A1F2N6M1"/>
 
             <TextView
-                    android:id="@+id/sp"
+                    android:id="@+id/harga"
                     android:layout_width="179dp"
                     android:layout_height="wrap_content"
                     android:text="19155000"/>
@@ -45,7 +45,7 @@
                     android:layout_height="22dp">
 
                 <TextView
-                        android:id="@+id/no1"
+                        android:id="@+id/kategori"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -53,7 +53,7 @@
 "/>
 
                 <TextView
-                        android:id="@+id/no2"
+                        android:id="@+id/thn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

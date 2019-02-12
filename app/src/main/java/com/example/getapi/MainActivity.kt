@@ -49,9 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class HomeFeed(val videos: List<Video>)
+class HomeFeed(val motors: List<MotorsItem>)
 
-class Video(val id: Int, val name: String, val link: String, val imageUrl: String,
-            val numberOfViews: Int, val channel: Channel)
+class MotorsItem(val getMotorCategoryId: String, val getName: String, val getThnMotor: String, val getId: String,
+            val getHargaJual: String)
 
-class Channel(val name: String, val profileImageUrl: String)

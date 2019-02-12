@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.list.view.*
 
 class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolder>() {
     override fun getItemCount(): Int {
-        return homeFeed.videos.count()
+        return homeFeed.motors.count()
     }
 
 //    val videoTitles = listOf("First title", "Second", "3rd", "MOOOOORE TITLE")
@@ -22,8 +22,13 @@ class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolde
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
 //        val videoTitle = videoTitles.get(position)
-        val video = homeFeed.videos.get(position)
-        holder.view.nama.text = video.name
+        val motorsItem = homeFeed.motors.get(position)
+        holder.view.nama.text = motorsItem.getName
+        holder.view.idmotor.text = motorsItem.getId
+        holder.view.harga.text = motorsItem.getHargaJual
+        holder.view.kategori.text = motorsItem.getMotorCategoryId
+        holder.view.thn.text = motorsItem.getThnMotor
+
     }
 
 }
