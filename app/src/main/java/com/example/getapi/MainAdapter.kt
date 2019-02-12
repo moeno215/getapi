@@ -8,12 +8,8 @@ import kotlinx.android.synthetic.main.list.view.*
 
 class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolder>() {
     override fun getItemCount(): Int {
-        return homeFeed.motors.count()
+        return homeFeed.motors.size
     }
-
-//    val videoTitles = listOf("First title", "Second", "3rd", "MOOOOORE TITLE")
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.list, parent, false)
@@ -21,17 +17,19 @@ class MainAdapter(val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolde
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-//        val videoTitle = videoTitles.get(position)
-        val motorsItem = homeFeed.motors.get(position)
-        holder.view.nama.text = motorsItem.getName
-        holder.view.idmotor.text = motorsItem.getId
-        holder.view.harga.text = motorsItem.getHargaJual
-        holder.view.kategori.text = motorsItem.getMotorCategoryId
-        holder.view.thn.text = motorsItem.getThnMotor
-
+        holder.bind(homeFeed!![position])
     }
 
 }
 
 class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view) {
+    
+    fun bind(model: HomeFeed) = with(itemView) {
+        nama.text = model.name
+        idmotor.text = model.id
+        harga.text = model.harga_jual
+        kategori.text = model.motor_category_id
+        thn.text = model.thn_motor
+        
+    }
 }
